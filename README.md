@@ -4,13 +4,21 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Clean architecture start with this 3 folder
+ 1. features
+ 2. core
+ 3. shared
 
-A few resources to get you started if this is your first Flutter project:
+ # In features folder
+   contain full app all features, like
+   - auth
+   - profile
+   - cart
+   - favourite
+   - more
+   - home/dashboard
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   Each features  built with 3 layers
+    1. data
+    2. domain
+    3. presentation
