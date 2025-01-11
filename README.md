@@ -22,3 +22,28 @@ Clean architecture start with this 3 folder
     1. data
     2. domain
     3. presentation
+
+
+  # Core folder
+    - utils
+        - constant
+        - log
+        - usecases
+        - validators
+    - routes
+    - network
+    - servies
+    - styles
+    - helper
+    - translations
+    - others
+
+ # Injections
+   injection file containe all injection methods feature, and it is called from the main.dart.
+
+ # Shared folder
+   - like features folder but for app common features
+   - payment features
+   - shared pages
+   - shared widgets
+   - others

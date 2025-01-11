@@ -1,12 +1,14 @@
+import 'package:clean_architecture/core/utils/injections.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  // Inject all dependencies
+  await initInjections();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
 
   @override
   Widget build(BuildContext context) {
