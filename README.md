@@ -47,3 +47,8 @@ Clean architecture start with this 3 folder
    - shared pages
    - shared widgets
    - others
+
+   # Api Calling
+
+   1. lib/features/article/domain/model
+       - make a api response model which is come from server,same data model

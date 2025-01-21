@@ -34,7 +34,16 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  # Dependency Injection & register singletons
   get_it: ^8.0.3
+  # Fetch Data From Api
+  dio: ^5.7.0
+  # BloC State Management
+  flutter_bloc: ^9.0.0
+  # Being able to compare objects in Dart
+  equatable: ^2.0.7
+  # Handle Success/Error State From Data Source
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:
