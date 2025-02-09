@@ -109,6 +109,9 @@ class Result {
   factory Result.fromJson(String data) {
     return Result.fromMap(json.decode(data) as Map<String, dynamic>);
   }
+  static List<Result> fromJsonList(List? json) {
+    return json?.map((e) => Result.fromJson(e)).toList() ?? [];
+  }
 
   /// `dart:convert`
   ///

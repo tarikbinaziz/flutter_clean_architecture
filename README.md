@@ -50,5 +50,15 @@ Clean architecture start with this 3 folder
 
    # Api Calling
 
-   1. lib/features/article/domain/model
+   1. We will start working on Domain Layer — Models, create a model for article Json coming from Api, this is the response of our Api:
+
+   -  lib/features/article/domain/model
        - make a api response model which is come from server,same data model
+
+   2. Now we will work on Data Layer — Data Source, after creating a model's files, we will create an Api for fetching articles data.
+
+   - lib/features/article/data/data_sources/remote/abstract_article_api.dart
+   
+   * We implement the abstract class to incorporate the logic for retrieving data from the API.
+
+   - lib/features/article/data/data_sources/remote/article_imp_api.dart
