@@ -75,8 +75,15 @@ Clean architecture start with this 3 folder
      Now in Data Layer — Repositories
      - Next, proceed to the data/repositories directory to implement the above-mentioned abstract class.
 
+  # Use Cases
 
+    After successfully establishing the repositories layer, the next step involves creating use-case files. These use cases will encapsulate and orchestrate the application-specific business logic, serving as a bridge between the presentation layer and the repositories, ensuring a clean and modular architecture.
 
+    Each use case is tasked with executing specific actions or operations, providing a reusable solution that can be utilized across different features without the need to duplicate code for each new functionality.
+
+    * Domain Layer
+      Now in Domain Layer — Use Cases
+      - inside domain/usecases folder, create a dart file abstract_articles_usecase.dart:
 
 
   ### Main Logic is short
