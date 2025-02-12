@@ -1,10 +1,10 @@
+import 'package:clean_architecture/core/network/error/dio_error_handler.dart';
 import 'package:clean_architecture/core/network/error/exceptions.dart';
 import 'package:clean_architecture/core/utils/constant/network_constant.dart';
 import 'package:clean_architecture/features/article/data/data_sources/remote/abstract_article_api.dart';
 import 'package:clean_architecture/features/article/domain/model/article_model/article_params.dart';
 import 'package:clean_architecture/features/article/domain/model/article_model/article_response_model.dart';
 import 'package:clean_architecture/features/article/domain/model/article_model/result.dart';
-import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 class ArticleImpApi extends AbstractArticleApi {
@@ -24,11 +24,16 @@ class ArticleImpApi extends AbstractArticleApi {
       }
       return ApiResponse.fromJson<List<Result>>(
           result.data, Result.fromJsonList);
-    } on DioError catch (e) {
-      if(e.type== DioErrorType.cancel){
-        throw CancelTokenException(e.message, e.response?.statusCode);
-
+    } on DioException catch (e) {
+      if (e.type == DioExceptionType.cancel) {
+        throw CancelTokenException(handleDioError(e), e.response?.statusCode);
+      } else {
+        throw ServerException(handleDioError(e), e.response?.statusCode);
       }
+    } on ServerException {
+      rethrow;
+    } catch (e) {
+      throw ServerException(e.toString(), null);
     }
   }
 }

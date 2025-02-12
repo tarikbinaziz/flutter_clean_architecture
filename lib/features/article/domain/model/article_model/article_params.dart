@@ -10,8 +10,8 @@ class ArticlesParams {
   }
 
   Map<String, dynamic> toJson() {
-    final _data = <String, dynamic>{};
-    _data['period'] = period;
-    return _data;
+    final data = <String, dynamic>{};
+    data['period'] = period;
+    return data;
   }
 }
