@@ -93,6 +93,16 @@ Clean architecture start with this 3 folder
       - inside domain/usecases folder, create a dart file abstract_articles_usecase.dart:
       - this use case will give us error message or data if success
 
+ Congratulations, now you finish creating Data and Domain Layer. 🎉🎉
+  recape:
+  # Domain Layer
+    - housing the essential models which parsed and utilized json response to our models
+    - we’ve implemented repositories responsible for processing data obtained from the data layer via the  data source.
+ 
+  # Presentation Layer
+   we will craft pages and widgets responsible for
+   - invoking the articles data through the defined use cases
+
 
   ### Main Logic is short
   
