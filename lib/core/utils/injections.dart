@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 
-final sl = GetIt.instance;
+final getItInstance = GetIt.instance;
 
 Future<void> initInjections() async {
   // await initSharedPrefsInjections();
